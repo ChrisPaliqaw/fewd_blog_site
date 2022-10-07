@@ -1,0 +1,43 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr 200px;
+    gap: 5px;
+    grid-template-areas:
+    "header"
+    "posts"
+    "footer"
+    ;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.posts {
+    grid-area: posts;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    text-align: left;
+}
+
+article {
+    border: solid;
+    border-color: grey;
+    padding: 5px;
+}
+
+.card-image {
+    width: 200px;
+}
+
+footer {
+    grid-area: footer;
+}

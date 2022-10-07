@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>The ROS Ranch</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div><a href="https://msn.com">Subscribe</a></div>
-      <h1>The ROS Ranch</h1>
-      <div>&#x1F50D;</div>
-    </header>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>The ROS Ranch</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<script>
+  // Script from https://www.w3schools.com/HOWTO/howto_html_include.asp
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4) {
+            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+</script>
+
+<body>
+  <div w3-include-html="header.html" class="header"></div>
+  <div class="posts">
+    <article>
+      <div class="categories">Conferences</div>
+      <h2>Robotnik at ROSCON</h2>
+      <time>October 22, 2022</time>
+      <img src="images/vecteezy_robot-chatbot-icon-sign_4996790.jpg" alt="Robot" class="card-image">
+      <summary>Check out our booth and lightning talks in Kyoto!</summary>
+    </article>
+    <article>1</article>
+    <article>1</article>
+    <article>1</article>
+    <article>1</article>
+    <article>1</article>
+  </div>
+  <footer>
+    <a href="https://www.vecteezy.com/free-vector/robot">Robot Vectors by Vecteezy</a>
+  </footer>
+  <script>
+    includeHTML();
+  </script>
+</body>
+
 </html>
