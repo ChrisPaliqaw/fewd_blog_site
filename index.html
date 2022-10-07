@@ -2,40 +2,11 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
-  <title>The ROS Ranch</title>
-  <link rel="stylesheet" href="styles/style.css" />
+  <meta charset="utf-8">
+  <title>The Robotnik Ranch</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/includeHTML.js"></script>
 </head>
-<script>
-  // Script from https://www.w3schools.com/HOWTO/howto_html_include.asp
-  function includeHTML() {
-    var z, i, elmnt, file, xhttp;
-    /* Loop through a collection of all HTML elements: */
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-      elmnt = z[i];
-      /*search for elements with a certain atrribute:*/
-      file = elmnt.getAttribute("w3-include-html");
-      if (file) {
-        /* Make an HTTP request using the attribute value as the file name: */
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-          if (this.readyState == 4) {
-            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-            /* Remove the attribute, and call this function once more: */
-            elmnt.removeAttribute("w3-include-html");
-            includeHTML();
-          }
-        }
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /* Exit the function: */
-        return;
-      }
-    }
-  }
-</script>
 
 <body>
   <div w3-include-html="header.html" class="header"></div>
@@ -46,16 +17,64 @@
       <time>October 22, 2022</time>
       <img src="images/vecteezy_robot-chatbot-icon-sign_4996790.jpg" alt="Robot" class="card-image">
       <summary>Check out our booth and lightning talks in Kyoto!</summary>
+      <div w3-include-html="continue_reading.html" class="header"></div>
     </article>
-    <article>1</article>
-    <article>1</article>
-    <article>1</article>
-    <article>1</article>
-    <article>1</article>
+    <article>
+      <div class="categories">Conferences</div>
+      <h2>Robotnik at ROSCON</h2>
+      <time>October 22, 2022</time>
+      <img src="images/vecteezy_robot-chatbot-icon-sign_4996790.jpg" alt="Robot" class="card-image">
+      <summary>Check out our booth and lightning talks in Kyoto!</summary>
+      <div w3-include-html="continue_reading.html" class="header"></div>
+    </article>
+    <article>
+      <div class="categories">Conferences</div>
+      <h2>Robotnik at ROSCON</h2>
+      <time>October 22, 2022</time>
+      <img src="images/vecteezy_robot-chatbot-icon-sign_4996790.jpg" alt="Robot" class="card-image">
+      <summary>Check out our booth and lightning talks in Kyoto!</summary>
+      <div w3-include-html="continue_reading.html" class="header"></div>
+    </article>
+    <article>
+      <div class="categories">Conferences</div>
+      <h2>Robotnik at ROSCON</h2>
+      <time>October 22, 2022</time>
+      <img src="images/vecteezy_robot-chatbot-icon-sign_4996790.jpg" alt="Robot" class="card-image">
+      <summary>Check out our booth and lightning talks in Kyoto!</summary>
+      <div w3-include-html="continue_reading.html" class="header"></div>
+    </article>
+    <article>
+      <div class="categories">Conferences</div>
+      <h2>Robotnik at ROSCON</h2>
+      <time>October 22, 2022</time>
+      <img src="images/vecteezy_robot-chatbot-icon-sign_4996790.jpg" alt="Robot" class="card-image">
+      <summary>Check out our booth and lightning talks in Kyoto!</summary>
+      <div w3-include-html="continue_reading.html" class="header"></div>
+    </article>
+    <article>
+      <div class="categories">Conferences</div>
+      <h2>Robotnik at ROSCON</h2>
+      <time>October 22, 2022</time>
+      <img src="images/vecteezy_robot-chatbot-icon-sign_4996790.jpg" alt="Robot" class="card-image">
+      <summary>Check out our booth and lightning talks in Kyoto!</summary>
+      <div w3-include-html="continue_reading.html" class="header"></div>
+    </article>
   </div>
-  <footer>
-    <a href="https://www.vecteezy.com/free-vector/robot">Robot Vectors by Vecteezy</a>
-  </footer>
+  <nav>
+    <h2>Archives</h2>
+    <ul>
+      <li><a href="#">September, 2022</a></li>
+      <li><a href="#">August, 2022</a></li>
+      <li><a href="#">July, 2022</a></li>
+      <li><a href="#">June, 2022</a></li>
+      <li><a href="#">May, 2022</a></li>
+      <li><a href="#">April, 2022</a></li>
+      <li><a href="#">March, 2022</a></li>
+      <li><a href="#">February, 2022</a></li>
+      <li><a href="#">January, 2022</a></li>
+    </ul>
+  </nav>
+  <div w3-include-html="footer.html" class="footer"></div>
   <script>
     includeHTML();
   </script>
