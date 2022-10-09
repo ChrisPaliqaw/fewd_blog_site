@@ -53,16 +53,6 @@ body {
     }
 }
 
-article {
-    border: solid;
-    border-color: grey;
-    padding: 5px;
-    display: flex;
-    gap: 5px;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
 .card-image {
     max-width: 150px;
     height: auto;

@@ -1,0 +1,37 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 175px;
+    grid-template-rows: 100px 1fr 50px;
+    gap: 5px;
+    grid-template-areas:
+        "header header"
+        "post nav"
+        "footer footer"
+    ;
+}
+
+@media (max-width: 650px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr auto 50px;
+        gap: 5px;
+        grid-template-areas:
+            "header"
+            "post"
+            "nav"
+            "footer"
+        ;
+    }
+}
+
+.post-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+ 
+.post-image {
+    max-width: 300px;
+    height: auto;
+}
