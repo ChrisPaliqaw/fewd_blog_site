@@ -5,10 +5,11 @@
 body {
     display: grid;
     grid-template-columns: 1fr 175px;
-    grid-template-rows: 100px 1fr 50px;
+    grid-template-rows: 100px 25px 1fr 50px;
     gap: 5px;
     grid-template-areas:
         "header header"
+        "return return"
         "post nav"
         "footer footer"
     ;
@@ -22,11 +23,16 @@ body {
         gap: 5px;
         grid-template-areas:
             "header"
+            "return"
             "post"
             "nav"
             "footer"
         ;
     }
+}
+
+.return {
+    grid-area: return;
 }
 
 .post-buttons {
