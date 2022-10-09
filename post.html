@@ -11,17 +11,20 @@
 
 <body>
   <div w3-include-html="header.html" class="header"></div>
+  <a href="index.html" class="return">Return to homepage</a>
   <div class="post">
     <article>
       <div class="categories">Conferences</div>
       <h2>Robotnik at ROSCON</h2>
       <time>October 22, 2022</time>
-      <img src="images/vecteezy_robot-chatbot-icon-sign_4996790.jpg" alt="Robot" class="post-image">
-      <summary>Check out our booth and lightning talks in Kyoto!</summary>
+      <figure>
+        <img src="images/vecteezy_robot-chatbot-icon-sign_4996790.jpg" alt="Robot" class="post-image">
+        <figcaption>RB-1</label>  
+      </figure>      <summary>Check out our booth and lightning talks in Kyoto!</summary>
       <h3>Join the party</h3>
       <p>Check out our beer-bottle opening robot on the main floor
         at booth 4-7. Our live dancing robot demonstration yesterday was
-        a "smashing success," as reported by <a href="#">The Japan Times</a>.
+        a "smashing success," as reported by <a href="#">The Kyoto Times</a>.
       </p>
       <blockquote>
         Art has again met technology in the birthplace of Mario.
@@ -38,25 +41,12 @@
         <a href="#">LinkedIn</a>
       </div>
       <div class="post-buttons">
-        <button>Previous article</button>
-        <button>Next article</button>
+        <button onclick="location.href='#';">Previous article</button>
+        <button onclick="location.href='#';">Next article</button>
       </div>
     </article>
   </div>
-  <nav>
-    <h2>Archives</h2>
-    <ul>
-      <li><a href="#">September, 2022</a></li>
-      <li><a href="#">August, 2022</a></li>
-      <li><a href="#">July, 2022</a></li>
-      <li><a href="#">June, 2022</a></li>
-      <li><a href="#">May, 2022</a></li>
-      <li><a href="#">April, 2022</a></li>
-      <li><a href="#">March, 2022</a></li>
-      <li><a href="#">February, 2022</a></li>
-      <li><a href="#">January, 2022</a></li>
-    </ul>
-  </nav>
+  <div w3-include-html="nav.html"></div>
   <div w3-include-html="footer.html" class="footer"></div>
   <script>
     includeHTML();
