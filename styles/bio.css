@@ -1,0 +1,38 @@
+/* <div class="author-info">
+<img src="images/favicon.ico">
+<div class="author-name">Chris Paliqaw</div>
+<div class="role">Student at Udacity</div>
+<div class="bio">Chris writes comics and makes web pages for robots.</div>
+</div> */
+.author-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    grid-template-areas:
+    "avatar author"
+    "role role"
+    "bio bio"
+    ;
+}
+
+.author-info img {
+    grid-area: avatar;
+}
+
+.author-name {
+    grid-area: author;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.role {
+    grid-area: role;
+    font-style: italic;
+}
+
+.bio {
+    grid-area: bio;
+    font-style: italic;
+}

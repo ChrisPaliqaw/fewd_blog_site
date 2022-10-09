@@ -1,5 +1,6 @@
 
 @import "style.css";
+@import "bio.css";
 
 body {
     display: grid;
@@ -37,4 +38,10 @@ body {
 .post-image {
     max-width: 300px;
     height: auto;
+}
+
+.social-media-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
