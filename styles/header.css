@@ -1,0 +1,47 @@
+header {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.navbar1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+header .navbar2 li a {
+    text-decoration: none;
+}
+
+header .navbar1 li a {
+    background-color: red;
+    padding: 4px;
+}
+
+.inactive {
+    color: white;
+}
+
+.active {
+    color: blue;
+}
+
+.navbar2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+@media (max-width: 500px) {
+    .invisible-small {
+        display: none;
+    }
+}
